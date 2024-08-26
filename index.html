@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Fractales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="ejemplos-izquierda">
+            <div class="ejemplo">
+                <h3>Ejemplo 1</h3>
+                <p>Parte real (c): -0.7</p>
+                <p>Parte imaginaria (c): 0.27015</p>
+                <p>Iteraciones: 256</p>
+                <p>Resultado: Espirales y estructuras.</p>
+            </div>
+            <div class="ejemplo">
+                <h3>Ejemplo 2</h3>
+                <p>Parte real (c): 0.355</p>
+                <p>Parte imaginaria (c): 0.355</p>
+                <p>Iteraciones: 256</p>
+                <p>Resultado: Diseño agresivo.</p>
+            </div>
+            <div class="ejemplo">
+                <h3>Ejemplo 3</h3>
+                <p>Parte real (c): -0.4</p>
+                <p>Parte imaginaria (c): 0.6</p>
+                <p>Iteraciones: 256</p>
+                <p>Resultado: Patrones en espiral.</p>
+            </div>
+        </div>
+        
+        <div class="contenedor-formulario">
+            <h1>Generador de Fractales</h1>
+            <form id="formulario-fractal">
+                <label for="real">Parte real (c):</label>
+                <input type="text" id="real" value="-0.7" required>
+
+                <label for="imaginario">Parte imaginaria (c):</label>
+                <input type="text" id="imaginario" value="0.27015" required>
+
+                <label for="iteraciones">Número máximo de iteraciones:</label>
+                <input type="text" id="iteraciones" value="256" required>
+
+                <label for="color">Color:</label>
+                <input type="color" id="color" value="#ff0000" oninput="actualizarVistaPreviaColor()">
+                <div class="vista-previa-color" id="vista-previa-color" style="background-color: #ff0000;"></div>
+
+                <button type="submit">Generar Fractal</button>
+            </form>
+            <canvas id="lienzo-fractal" width="800" height="600"></canvas>
+        </div>
+        
+        <div class="ejemplos-derecha">
+            <div class="ejemplo">
+                <h3>Ejemplo 4</h3>
+                <p>Parte real (c): -0.8</p>
+                <p>Parte imaginaria (c): 0.156</p>
+                <p>Iteraciones: 256</p>
+                <p>Resultado: Diseño intrincado.</p>
+            </div>
+            <div class="ejemplo">
+                <h3>Ejemplo 5</h3>
+                <p>Parte real (c): 0.3</p>
+                <p>Parte imaginaria (c): 0.5</p>
+                <p>Iteraciones: 256</p>
+                <p>Resultado: Patrones suaves.</p>
+            </div>
+            <div class="ejemplo">
+                <h3>Ejemplo 6</h3>
+                <p>Parte real (c): 0.285</p>
+                <p>Parte imaginaria (c): 0.01</p>
+                <p>Iteraciones: 256</p>
+                <p>Resultado: Diseño dinámico.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
